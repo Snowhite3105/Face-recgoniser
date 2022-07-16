@@ -12,7 +12,7 @@ function CaptureSnap(){
         document.getElementById("snap").innerHTML = '<img id="captured_image" src="'+data_uri+'"/>';
     });}
     console.log("ml5version",ml5.version);
-    classifier = 
+    classifier =  classifier = ml5.imageClassifier(imageModelURL + 'model.json');
   
     function modelLoaded(){
         console.log('model.is.loaded')
