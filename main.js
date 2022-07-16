@@ -12,7 +12,7 @@ function CaptureSnap(){
         document.getElementById("snap").innerHTML = '<img id="captured_image" src="'+data_uri+'"/>';
     });}
     console.log("ml5version",ml5.version);
-    classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/hNcc1oJYX/model.json',modelLoaded);
+    classifier = 
   
     function modelLoaded(){
         console.log('model.is.loaded')
