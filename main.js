@@ -12,14 +12,14 @@ function CaptureSnap(){
         document.getElementById("snap").innerHTML = '<img id="captured_image" src="'+data_uri+'"/>';
     });}
     console.log("ml5version",ml5.version);
-    classifier =  classifier = ml5.imageClassifier(imageModelURL + 'model.json');
+    classifier =ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/1DMsFT2u2/model.json',modelLoaded);
   
     function modelLoaded(){
         console.log('model.is.loaded')
     }
 function check()
 {
-    img=document.getElementById('captured_image');
+    img= document.getElementById('captured_image');
     classifier.classify(img, gotResult);
 }
 function gotResult(error, results){
